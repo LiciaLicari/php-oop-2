@@ -7,7 +7,6 @@ class Kennel extends Product
     public $depth;
     public $color;
 
-
     public function __construct($product_name, $product_price, $product_discount, $product_description, $product_icon, $product_img, $product_brand, $product_review, $width, $height, $depth, $color)
     {
         parent::__construct($product_name, $product_price, $product_discount, $product_description, $product_icon, $product_img, $product_brand, $product_review);

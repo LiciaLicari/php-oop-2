@@ -51,7 +51,7 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
                         <h2><?= $prodotto->product_description; ?></h2>
                         <h2><?= $prodotto->product_price; ?> €</h2>
                         <h2><?= $prodotto->getDetails(); ?></h2>
-                        <h2><?= $prodotto->getCategoryIcon(); ?></h2>
+                        <h2><?= $prodotto->product_icon->getCategoryIcon(); ?></h2>
                     </div>
                 <?php endforeach; ?>
             </div>
