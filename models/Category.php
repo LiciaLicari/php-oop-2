@@ -16,10 +16,10 @@ class Category
      */
     public function getCategoryIcon()
     {
-        if ($this->category === 'Cani' or $this->category === 'cani') {
-            return 'Cani' . '<img style="width: 30px;" src="./icns/dog.png" alt="">';
-        } elseif ($this->category === 'Gatti' or $this->category === 'gatti') {
-            return 'Gatti' . '<img style="width: 30px;" src="./icns/cat.png" alt="">';
+        if ($this->category === 'Cane' or $this->category === 'cane') {
+            return 'Cane' . '<img style="width: 30px;" src="./icns/dog.png" alt="">';
+        } elseif ($this->category === 'Gatto' or $this->category === 'gatto') {
+            return 'Gatto' . '<img style="width: 30px;" src="./icns/cat.png" alt="">';
         }
     }
 }
