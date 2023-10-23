@@ -46,16 +46,34 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
         <div class="container">
             <div class="row">
                 <?php foreach ($prodotti as $prodotto) : ?>
-                    <div class="col">
-                        <h2><?= $prodotto->product_name; ?></h2>
-                        <h2><?= $prodotto->product_description; ?></h2>
-                        <h2><?= $prodotto->product_price; ?> €</h2>
-                        <h2><?= $prodotto->getDetails(); ?></h2>
-                        <h2><?= $prodotto->product_icon->getCategoryIcon(); ?></h2>
+                    <div class="col-6 col-md-4 my-3">
+
+                        <div class="card h-100">
+                            <div class="card-header d-flex flex-column justify-content-between bg-white text-black h-25">
+                                <h4 class="text-uppercase"><?= $prodotto->product_name; ?></h4>
+                                <span><?= get_class($prodotto) ?></span>
+                            </div>
+                            <div class="card-body text-center h-50">
+                                <img class="h-75 img-fluid" src="<?= $prodotto->product_img ?>" alt="xx">
+                                <p class="mt-3"><?= $prodotto->getDetails(); ?></p>
+                            </div>
+                            <div class="card-footer h-25 d-flex justify-content-between align-items-center">
+
+                                <h2 class="text-success"><?= $prodotto->product_price; ?> €</h2>
+                                <span><?= $prodotto->product_icon->getCategoryIcon(); ?></span>
+                                product_brand
+                                <span><?= $prodotto->product_brand; ?></span>
+                                <p><?= $prodotto->product_description; ?></p>
+                                <p><?= $prodotto->product_review; ?></p>
+                            </div>
+
+
+
+
+                        </div>
+                    <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
             </div>
-        </div>
     </main>
 
 
