@@ -50,8 +50,7 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 
                         <div class="card h-100">
                             <div class="card-header d-flex flex-column justify-content-between bg-white text-black h-25">
-                                <h4 class="text-uppercase"><?= $prodotto->product_name; ?></h4>
-                                <span><?= get_class($prodotto) ?></span>
+                                <h4 class="text-uppercase"><?= $prodotto->getName(); ?></h4>
                             </div>
                             <div class="card-body text-center h-50">
                                 <img class="h-75 img-fluid" src="<?= $prodotto->product_img ?>" alt="xx">
@@ -59,7 +58,8 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
                             </div>
                             <div class="card-footer h-25 d-flex justify-content-between align-items-center">
 
-                                <h2 class="text-success"><?= $prodotto->product_price; ?> €</h2>
+                                <h2 class="text-success"><?= $prodotto->getPrice($prodotto->product_price); ?> €</h2>
+
                                 <span><?= $prodotto->product_icon->getCategoryIcon(); ?></span>
                                 <span><?= $prodotto->product_brand; ?></span>
                                 <p><?= $prodotto->product_description; ?></p>

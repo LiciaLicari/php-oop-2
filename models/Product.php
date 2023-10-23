@@ -1,7 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../Trait/Namable.php';
 class Product
 {
+    use Namable;
+
 
     public $product_name;
 
@@ -19,13 +22,6 @@ class Product
 
 
 
-
-
-
-
-
-
-
     public function __construct($product_name, $product_price, $product_description, $product_icon, $product_img, $product_brand, $product_review)
     {
         $this->product_name = $product_name;
@@ -35,5 +31,14 @@ class Product
         $this->product_img = $product_img;
         $this->product_brand = $product_brand;
         $this->product_review = $product_review;
+    }
+
+    public function getPrice($price)
+    {
+        if (!is_null($price)) {
+            return $this->product_price;
+        } else {
+            throw new Exception('il prezzo non è disponibile');
+        }
     }
 }
