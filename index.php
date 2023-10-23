@@ -61,7 +61,6 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 
                                 <h2 class="text-success"><?= $prodotto->product_price; ?> €</h2>
                                 <span><?= $prodotto->product_icon->getCategoryIcon(); ?></span>
-                                product_brand
                                 <span><?= $prodotto->product_brand; ?></span>
                                 <p><?= $prodotto->product_description; ?></p>
                                 <p><?= $prodotto->product_review; ?></p>
