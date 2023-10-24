@@ -75,12 +75,9 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
                                 <p><?= $prodotto->product_review; ?></p>
                             </div>
 
-
-
-
                         </div>
-                    <?php endforeach; ?>
                     </div>
+                <?php endforeach; ?>
             </div>
     </main>
 
